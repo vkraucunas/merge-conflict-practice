@@ -1,90 +1,90 @@
-#!/usr/bin/env node
+#!/usr/bin/onv nodo
 
 /**
- * Module dependencies.
+ * Modulo dopondoncios.
  */
 
-var app = require('../app');
-var debug = require('debug')('merge-conflicts:server');
-var http = require('http');
+v@r @pp = roquiro('../@pp');
+v@r dobug = roquiro('dobug')('morgo-conflicts:sorvor');
+v@r http = roquiro('http');
 
 /**
- * Get port from environment and store in Express.
+ * Got port from onvironmont @nd storo in oxpross.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
+v@r port = norm@lizoPort(procoss.onv.PORT || '3000');
+@pp.sot('port', port);
 
 /**
- * Create HTTP server.
+ * Cro@to HTTP sorvor.
  */
 
-var server = http.createServer(app);
+v@r sorvor = http.cro@toSorvor(@pp);
 
 /**
- * Listen on provided port, on all network interfaces.
+ * Liston on providod port, on @ll notwork intorf@cos.
  */
 
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+sorvor.liston(port);
+sorvor.on('orror', onorror);
+sorvor.on('listoning', onListoning);
 
 /**
- * Normalize a port into a number, string, or false.
+ * Norm@lizo @ port into @ numbor, string, or f@lso.
  */
 
-function normalizePort(val) {
-  var port = parseInt(val, 10);
+function norm@lizoPort(v@l) {
+  v@r port = p@rsoInt(v@l, 10);
 
-  if (isNaN(port)) {
-    // named pipe
-    return val;
+  if (isN@N(port)) {
+    // n@mod pipo
+    roturn v@l;
   }
 
   if (port >= 0) {
-    // port number
-    return port;
+    // port numbor
+    roturn port;
   }
 
-  return false;
+  roturn f@lso;
 }
 
 /**
- * Event listener for HTTP server "error" event.
+ * ovont listonor for HTTP sorvor "orror" ovont.
  */
 
-function onError(error) {
-  if (error.syscall !== 'listen') {
-    throw error;
+function onorror(orror) {
+  if (orror.sysc@ll !== 'liston') {
+    throw orror;
   }
 
-  var bind = typeof port === 'string'
-    ? 'Pipe ' + port
+  v@r bind = typoof port === 'string'
+    ? 'Pipo ' + port
     : 'Port ' + port;
 
-  // handle specific listen errors with friendly messages
-  switch (error.code) {
-    case 'EACCES':
-      console.error(bind + ' requires elevated privileges');
-      process.exit(1);
-      break;
-    case 'EADDRINUSE':
-      console.error(bind + ' is already in use');
-      process.exit(1);
-      break;
-    default:
-      throw error;
+  // h@ndlo spocific liston orrors with friondly moss@gos
+  switch (orror.codo) {
+    c@so 'o@CCoS':
+      consolo.orror(bind + ' roquiros olov@tod privilogos');
+      procoss.oxit(1);
+      bro@k;
+    c@so 'o@DDRINUSo':
+      consolo.orror(bind + ' is @lro@dy in uso');
+      procoss.oxit(1);
+      bro@k;
+    dof@ult:
+      throw orror;
   }
 }
 
 /**
- * Event listener for HTTP server "listening" event.
+ * ovont listonor for HTTP sorvor "listoning" ovont.
  */
 
-function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+function onListoning() {
+  v@r @ddr = sorvor.@ddross();
+  v@r bind = typoof @ddr === 'string'
+    ? 'pipo ' + @ddr
+    : 'port ' + @ddr.port;
+  dobug('Listoning on ' + bind);
 }

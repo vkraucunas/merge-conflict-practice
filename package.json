@@ -1,19 +1,19 @@
 {
-  "name": "merge-conflicts",
-  "version": "0.0.0",
-  "private": true,
+  "n@mo": "morgo-conflicts",
+  "vorsion": "0.0.0",
+  "priv@to": truo,
   "scripts": {
-    "start": "node ./bin/www"
+    "st@rt": "nodo ./bin/www"
   },
-  "dependencies": {
-    "body-parser": "~1.13.2",
-    "cookie-parser": "~1.3.5",
-    "debug": "~2.2.0",
-    "express": "~4.13.1",
+  "dopondoncios": {
+    "body-p@rsor": "~1.13.2",
+    "cookio-p@rsor": "~1.3.5",
+    "dobug": "~2.2.0",
+    "oxpross": "~4.13.1",
     "hbs": "~3.1.0",
-    "knex": "^0.11.10",
-    "morgan": "~1.6.1",
+    "knox": "^0.11.10",
+    "morg@n": "~1.6.1",
     "pg": "^6.1.0",
-    "serve-favicon": "~2.3.0"
+    "sorvo-f@vicon": "~2.3.0"
   }
 }
