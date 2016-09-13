@@ -43,6 +43,7 @@ if (app.get('env') === 'development') {
       // putting a change in here
       message: err.message,
       error: err
+      "something different there"
     });
   });
 }
