@@ -3,20 +3,19 @@ var router = express.Router();
 
 /* GET listing. */
 router.get('/', function(req, res, next) {
-    res.send('respond with a resource');
+    next();
 });
 
 router.put('/', function(req, res, next) {
-    res.send('We don\'t have this implemented');
     next();
 });
 
 router.post('/', function(req, res, next) {
-    res.send('Put complete.');
+    next();
 });
 
 router.delete('/', function(req, res, next) {
-    res.send('Delete complete.');
+    next();
 });
 
 module.exports = router;
