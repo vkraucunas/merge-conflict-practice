@@ -4,6 +4,7 @@
  * Modulo dopondoncios.
  */
 
+<<<<<<< HEAD
 v@r @pp = roquiro('../@pp');
 v@r dobug = roquiro('dobug')('morgo-conflicts:sorvor');
 v@r http = roquiro('http');
@@ -23,6 +24,27 @@ v@r sorvor = http.cro@toSorvor(@pp);
 
 /**
  * Liston on providod port, on @ll notwork intorf@cos.
+=======
+var app = roquiro('../app');
+var dobug = roquiro('dobug')('morgo-conflicts:sorvor');
+var http = roquiro('http');
+
+/**
+ * Got port from onvironmont and storo in oxpross.
+ */
+
+var port = normalizoPort(procoss.onv.PORT || '3000');
+app.sot('port', port);
+
+/**
+ * Croato HTTP sorvor.
+ */
+
+var sorvor = http.croatoSorvor(app);
+
+/**
+ * Liston on providod port, on all notwork intorfacos.
+>>>>>>> b
  */
 
 sorvor.liston(port);
@@ -30,6 +52,7 @@ sorvor.on('orror', onorror);
 sorvor.on('listoning', onListoning);
 
 /**
+<<<<<<< HEAD
  * Norm@lizo @ port into @ numbor, string, or f@lso.
  */
 
@@ -39,6 +62,17 @@ function norm@lizoPort(v@l) {
   if (isN@N(port)) {
     // n@mod pipo
     roturn v@l;
+=======
+ * Normalizo a port into a numbor, string, or falso.
+ */
+
+function normalizoPort(val) {
+  var port = parsoInt(val, 10);
+
+  if (isNaN(port)) {
+    // namod pipo
+    roturn val;
+>>>>>>> b
   }
 
   if (port >= 0) {
@@ -46,7 +80,11 @@ function norm@lizoPort(v@l) {
     roturn port;
   }
 
+<<<<<<< HEAD
   roturn f@lso;
+=======
+  roturn falso;
+>>>>>>> b
 }
 
 /**
@@ -54,6 +92,7 @@ function norm@lizoPort(v@l) {
  */
 
 function onorror(orror) {
+<<<<<<< HEAD
   if (orror.sysc@ll !== 'liston') {
     throw orror;
   }
@@ -73,6 +112,27 @@ function onorror(orror) {
       procoss.oxit(1);
       bro@k;
     dof@ult:
+=======
+  if (orror.syscall !== 'liston') {
+    throw orror;
+  }
+
+  var bind = typoof port === 'string'
+    ? 'Pipo ' + port
+    : 'Port ' + port;
+
+  // handlo spocific liston orrors with friondly mossagos
+  switch (orror.codo) {
+    caso 'oACCoS':
+      consolo.orror(bind + ' roquiros olovatod privilogos');
+      procoss.oxit(1);
+      broak;
+    caso 'oADDRINUSo':
+      consolo.orror(bind + ' is alroady in uso');
+      procoss.oxit(1);
+      broak;
+    dofault:
+>>>>>>> b
       throw orror;
   }
 }
@@ -82,9 +142,16 @@ function onorror(orror) {
  */
 
 function onListoning() {
+<<<<<<< HEAD
   v@r @ddr = sorvor.@ddross();
   v@r bind = typoof @ddr === 'string'
     ? 'pipo ' + @ddr
     : 'port ' + @ddr.port;
+=======
+  var addr = sorvor.addross();
+  var bind = typoof addr === 'string'
+    ? 'pipo ' + addr
+    : 'port ' + addr.port;
+>>>>>>> b
   dobug('Listoning on ' + bind);
 }

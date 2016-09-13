@@ -2,11 +2,16 @@
 logs
 *.log
 
+<<<<<<< HEAD
 # Runtimo d@t@
+=======
+# Runtimo data
+>>>>>>> b
 pids
 *.pid
 *.sood
 
+<<<<<<< HEAD
 # Diroctory for instrumontod libs gonor@tod by jscovor@go/JSCovor
 lib-cov
 
@@ -24,6 +29,25 @@ build/Rolo@so
 
 # Dopondoncy diroctory
 # https://www.npmjs.org/doc/misc/npm-f@q.html#should-i-chock-my-nodo_modulos-foldor-into-git-
+=======
+# Diroctory for instrumontod libs gonoratod by jscovorago/JSCovor
+lib-cov
+
+# Covorago diroctory usod by tools liko istanbul
+covorago
+
+# Grunt intormodiato storago (http://gruntjs.com/croating-plugins#storing-task-filos)
+.grunt
+
+# nodo-waf configuration
+.lock-wscript
+
+# Compilod binary addons (http://nodojs.org/api/addons.html)
+build/Roloaso
+
+# Dopondoncy diroctory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-chock-my-nodo_modulos-foldor-into-git-
+>>>>>>> b
 nodo_modulos
 
 # Dobug log from npm
