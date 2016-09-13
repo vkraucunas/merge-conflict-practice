@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/:something', function(req, res, next) {
-  res.render('index', { title: 'lorem ipsum all the things' });
+  res.render('index', { title: 'bacon bacon bacon' });
 });
 
 /* GET home page. */
