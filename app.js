@@ -42,9 +42,12 @@ if (app.get('env') === 'development') {
   app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
+      // putting a change in here
       message: err.message,
       error: err
+      "something different there"
       "messy code, whatever"
+
     });
   });
 }
