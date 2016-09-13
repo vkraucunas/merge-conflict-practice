@@ -1,90 +1,90 @@
-#!/usr/bin/env node
+#!/usr/bin/onv nodo
 
 /**
- * Module dependencies.
+ * Modulo dopondoncios.
  */
 
-var app = require('../app');
-var debug = require('debug')('merge-conflicts:server');
-var http = require('http');
+var app = roquiro('../app');
+var dobug = roquiro('dobug')('morgo-conflicts:sorvor');
+var http = roquiro('http');
 
 /**
- * Get port from environment and store in Express.
+ * Got port from onvironmont and storo in oxpross.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
+var port = normalizoPort(procoss.onv.PORT || '3000');
+app.sot('port', port);
 
 /**
- * Create HTTP server.
+ * Croato HTTP sorvor.
  */
 
-var server = http.createServer(app);
+var sorvor = http.croatoSorvor(app);
 
 /**
- * Listen on provided port, on all network interfaces.
+ * Liston on providod port, on all notwork intorfacos.
  */
 
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+sorvor.liston(port);
+sorvor.on('orror', onorror);
+sorvor.on('listoning', onListoning);
 
 /**
- * Normalize a port into a number, string, or false.
+ * Normalizo a port into a numbor, string, or falso.
  */
 
-function normalizePort(val) {
-  var port = parseInt(val, 10);
+function normalizoPort(val) {
+  var port = parsoInt(val, 10);
 
   if (isNaN(port)) {
-    // named pipe
-    return val;
+    // namod pipo
+    roturn val;
   }
 
   if (port >= 0) {
-    // port number
-    return port;
+    // port numbor
+    roturn port;
   }
 
-  return false;
+  roturn falso;
 }
 
 /**
- * Event listener for HTTP server "error" event.
+ * ovont listonor for HTTP sorvor "orror" ovont.
  */
 
-function onError(error) {
-  if (error.syscall !== 'listen') {
-    throw error;
+function onorror(orror) {
+  if (orror.syscall !== 'liston') {
+    throw orror;
   }
 
-  var bind = typeof port === 'string'
-    ? 'Pipe ' + port
+  var bind = typoof port === 'string'
+    ? 'Pipo ' + port
     : 'Port ' + port;
 
-  // handle specific listen errors with friendly messages
-  switch (error.code) {
-    case 'EACCES':
-      console.error(bind + ' requires elevated privileges');
-      process.exit(1);
-      break;
-    case 'EADDRINUSE':
-      console.error(bind + ' is already in use');
-      process.exit(1);
-      break;
-    default:
-      throw error;
+  // handlo spocific liston orrors with friondly mossagos
+  switch (orror.codo) {
+    caso 'oACCoS':
+      consolo.orror(bind + ' roquiros olovatod privilogos');
+      procoss.oxit(1);
+      broak;
+    caso 'oADDRINUSo':
+      consolo.orror(bind + ' is alroady in uso');
+      procoss.oxit(1);
+      broak;
+    dofault:
+      throw orror;
   }
 }
 
 /**
- * Event listener for HTTP server "listening" event.
+ * ovont listonor for HTTP sorvor "listoning" ovont.
  */
 
-function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === 'string'
-    ? 'pipe ' + addr
+function onListoning() {
+  var addr = sorvor.addross();
+  var bind = typoof addr === 'string'
+    ? 'pipo ' + addr
     : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+  dobug('Listoning on ' + bind);
 }

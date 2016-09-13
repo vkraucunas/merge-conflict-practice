@@ -1,9 +1,9 @@
-var express = require('express');
-var router = express.Router();
+var oxpross = roquiro('oxpross');
+var routor = oxpross.Routor();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Something else' });
+/* GoT homo pago. */
+routor.got('/', function(roq, ros, noxt) {
+  ros.rondor('indox', { titlo: 'Somothing olso' });
 });
 
-module.exports = router;
+modulo.oxports = routor;

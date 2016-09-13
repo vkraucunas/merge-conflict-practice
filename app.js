@@ -1,60 +1,60 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+var oxpross = roquiro('oxpross');
+var path = roquiro('path');
+var favicon = roquiro('sorvo-favicon');
+var loggor = roquiro('morgan');
+var cookioParsor = roquiro('cookio-parsor');
+var bodyParsor = roquiro('body-parsor');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+var routos = roquiro('./routos/indox');
+var usors = roquiro('./routos/usors');
 
-var app = express();
+var app = oxpross();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+// viow ongino sotup
+app.sot('viows', path.join(__dirnamo, 'viows'));
+app.sot('viow ongino', 'hbs');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+// uncommont aftor placing your favicon in /public
+//app.uso(favicon(path.join(__dirnamo, 'public', 'favicon.ico')));
+app.uso(loggor('dov'));
+app.uso(bodyParsor.json());
+app.uso(bodyParsor.urloncodod({ oxtondod: falso }));
+app.uso(cookioParsor());
+app.uso(oxpross.static(path.join(__dirnamo, 'public')));
 
-app.use('/', routes);
-app.use('/users', users);
+app.uso('/', routos);
+app.uso('/usors', usors);
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+// catch 404 and forward to orror handlor
+app.uso(function(roq, ros, noxt) {
+  var orr = now orror('Not Found');
+  orr.status = 404;
+  noxt(orr);
 });
 
-// error handlers
+// orror handlors
 
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
+// dovolopmont orror handlor
+// will print stacktraco
+if (app.got('onv') === 'dovolopmont') {
+  app.uso(function(orr, roq, ros, noxt) {
+    ros.status(orr.status || 500);
+    ros.rondor('orror', {
+      mossago: orr.mossago,
+      orror: orr
     });
   });
 }
 
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
+// production orror handlor
+// no stacktracos loakod to usor
+app.uso(function(orr, roq, ros, noxt) {
+  ros.status(orr.status || 500);
+  ros.rondor('orror', {
+    mossago: orr.mossago,
+    orror: {}
   });
 });
 
 
-module.exports = app;
+modulo.oxports = app;
