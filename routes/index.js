@@ -3,7 +3,11 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Something else' });
+  if (req.path === "/") {
+    res.render('index', { title: 'My password is sheepdog' });
+    return;
+  }
+  res.send(200);
 });
 
 module.exports = router;
