@@ -3,20 +3,19 @@ var router = express.Router();
 
 /* GET listing. */
 router.get('/', function(req, res, next) {
-    res.send('respond with a resource');
+    throw Error('not implemented');
 });
 
 router.put('/', function(req, res, next) {
-    res.send('We don\'t have this implemented');
-    next();
+    throw Error('not implemented');
 });
 
 router.post('/', function(req, res, next) {
-    res.send('Put complete.');
+    throw Error('not implemented');
 });
 
 router.delete('/', function(req, res, next) {
-    res.send('Delete complete.');
+    throw Error('not implemented');
 });
 
 module.exports = router;
