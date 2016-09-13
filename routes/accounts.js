@@ -7,7 +7,16 @@ router.get('/', function(req, res, next) {
 });
 
 router.put('/', function(req, res, next) {
-    throw Error("Not Implemented.")
+    res.send('We don\'t have this implemented');
+    next();
+});
+
+router.post('/', function(req, res, next) {
+   res.send('Put complete.');
+});
+
+router.delete('/', function(req, res, next) {
+    res.send('Delete complete.');
 });
 
 module.exports = router;
